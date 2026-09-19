@@ -28,7 +28,6 @@ class DaladminPanelProvider extends PanelProvider
             ->id('daladmin')
             ->path('daladmin')
             ->authGuard('web')
-            ->registration()
             ->login()
             ->colors([
                 'primary' => Color::Amber,

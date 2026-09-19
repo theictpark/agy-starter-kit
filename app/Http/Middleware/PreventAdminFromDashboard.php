@@ -16,7 +16,7 @@ class PreventAdminFromDashboard
     public function handle(Request $request, Closure $next): Response
     {
         if ($request->user()?->is_admin) {
-            return redirect('/daladmin');
+            abort(403, 'Admins are not allowed to access the dashboard.');
         }
         return $next($request);
     }
